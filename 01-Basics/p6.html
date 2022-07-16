@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS-Basics</title>
+    </head>
+    <body>
+        <script>
+            console.log(Date());
+            console.log(typeof(Date()));
+
+            var date = new Date(); // Object Creations
+            console.log(typeof(date));
+
+            console.log(date.getDay());
+
+            document.write("<h1>Switch Case..!</h1>");
+
+            switch(date.getDay())
+            {
+                case 0 : alert("Today is Sunday..!");
+                        break;
+                case 1 : alert("Today is Moday..!");
+                        break;
+                case 2 : alert("Today is Tuesday..!");
+                        break;
+                case 3 : alert("Today is Wednesday..!");
+                        break;
+                case 4 : alert("Today is Thursday..!");
+                        break;
+                case 5 : alert("Today is Friday..!");
+                        break;
+                case 6 : alert("Today is Saturday..!");
+                        break;
+
+                default : alert("No Information for the day..!");
+                break;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Static Method..!</h1>
+        <p>JS provides static methods that belongs to the class instead of an instance of an that class. These methods are called directly on the class itself.</p>
+        <hr>
+
+        <h3>Points to remember..!</h3>
+        <ul>
+            <li>The static keyword is used to declare a static method.</li>
+            <li>The static method can be any name.</li>
+            <li>A class can contain more than one static method.</li>
+            <li>If we declare more than one static method with a similar name, the JS always invokes the last one.</li>
+            <li>We can use this keyword to call a static method within another static method.</li>
+            <li>We can't use this keyword directly to call a static method within the non-static method.</li>
+            <li>In such case, we can call the static method either using the class name or as the property of the constructor.</li>
+        </ul>
+        <hr>
+
+        <h3>Static Method Example 1..!</h3>
+        <script>
+            class Demo {
+                static Display() {
+                    document.write("This is static method example.! document object result..!");
+                    //return ("This is static method example.!"); // This is correct
+                }
+            }
+            Demo.Display();
+
+        </script>
+
+        <h3>Static Method Example 2..!</h3>
+        <script>
+            class Demo1 {
+                static Display1() {
+                    return "This is Display1 static method..!";
+                }
+                static Display2() {
+                    return "This is Display2 static method..!";
+                }
+            }
+            document.write(Demo1.Display1() + "<br>");
+            document.write(Demo1.Display2());
+
+        </script>
+
+        <h3>Static Method Example 3..!</h3>
+        <script>
+            class Demo2 {
+                static Display1() {
+                    return "This is Display1 static method..!";
+                }
+                static Display1() {
+                    return "This is Display1 static method agian..!";
+                }
+            }
+            document.write(Demo2.Display1());
+
+        </script>
+
+        <h3>Static Method Example 4..!</h3>
+        <script>
+            class Demo3 {
+                static Display() {
+                    return "This is class Demo3 static method example..!";
+                }
+
+                constructor() {
+                    document.write(Demo3.Display());
+                }
+            }
+            var demo3 = new Demo3();
+
+        </script>
+
+        <h3>Static Method Example 5..!</h3>
+        <script>
+            class Demo4 {
+                static Display() {
+                    return "This is class Demo4 static method example..!";
+                }
+
+                Javed() {
+                    document.write(Demo4.Display() + "kjhfdkjhdsf sd");
+                }
+            }
+            var demo4 = new Demo4();
+            demo4.Javed();
+
+        </script>
+        <h3>Static Method Example 6..!</h3>
+        <script>
+            class StaticMethodCall {
+                static staticMethod() {
+                    return 'Static method has been called';
+                }
+                static anotherStaticMethod() {
+                    return this.staticMethod() + ' from another static method';
+                }
+            }
+            document.write(StaticMethodCall.staticMethod());
+            // 'Static method has been called'
+
+            document.write(StaticMethodCall.anotherStaticMethod());
+            // 'Static method has been called from another static method'
+
+        </script>
+
+    </body>
+</html>

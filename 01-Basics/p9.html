@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <center>
+            <h1>Function</h1>
+        </center>
+        <pre>
+			1. Default Function (No Parameter, No Return)
+			2. Without Parameter, with Return Value
+			3. With Parameter, Without Return Value
+			4. With Parameter, With Return Value
+		</pre>
+        <script>
+            document.write("<h1>Default Function (No Parameter, No Return)</h1>");
+            function Bepractical(){
+                document.write("This is Default function..!");
+            }
+            Bepractical();
+        </script>
+        <script>
+            document.write("<h1>Without Parameter, with Return Value</h1>");
+
+            function AddFunction(){
+                var firstNumber = 10, lastNumber = 20, sum;
+                sum = firstNumber + lastNumber;
+
+                return sum;
+                document.write(sum);
+
+            }
+            //AddFunction();
+            document.write(AddFunction());
+        </script>
+        <script>
+            document.write("<h1>With Parameter, Without Return Value</h1>");
+
+            function studDetails(firstName, lastName){
+                //var  = "HTML", ="CSS";
+                document.write("firstName :" + firstName +"<br>");
+                document.write("lastName :" + lastName +"<br>");
+
+                var fn, ln;
+                fn = firstName;
+                ln = lastName;
+                document.write(fn);
+                document.write(ln);
+            }
+            studDetails("HTML-5", "CSS-3");
+        </script>
+        <script>
+            document.write("<h1>With Parameter and With Return Value..!</h1>");
+            function studDetails(firstName, lastName){
+
+                var fn, ln, fullName;
+
+                fn = firstName;
+                ln = lastName;
+
+                fullName = fn +" "+ ln;
+
+                return fullName;
+            }
+            document.write(studDetails("Ajay", "Deepak"));
+        </script>
+
+        <!-- ECMA SCRIPT CODE -->
+        <script>
+            document.write("<h1>Function Defining..!</h1>");
+            function sum(a,b) {
+                return a + b;
+            }
+
+            document.write("<h1>Function Expressions..!</h1>");
+            var fullName = function(firstName, lastName){
+                return firstName + " " + lastName;
+            };
+
+            document.write("<h1>Arrow Function..!</h1>");
+            var rem = (a,b) => {
+                return a%b;
+            };
+            
+            document.write(`<h3> sum = ${ sum(33,44) } </h3>`);
+            document.write(`<h3> fullName = ${ fullName("HTML","CSS") } </h3>`);
+            document.write(`<h3> rem = ${ rem(33,4) } </h3>`);
+        </script>
+        <script>
+            document.write("<h1>Call Back Function..!</h1>");
+            
+            function HowareYou(health, yes, no){
+                
+                if(confirm(health)){
+                    yes();
+                }
+                else{
+                    no();
+                }
+            }
+            HowareYou("How is your Health?", function(){document.write("Good")}, function(){document.write("Bad")} );
+        </script>
+    </body>
+</html>

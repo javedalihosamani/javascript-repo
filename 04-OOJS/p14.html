@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h3>parameter constructor</h3>
+        <script>
+            function Car(na,mod,ye) {
+                this.name = na;
+                this.model = mod;
+                this.year = ye;
+                this.getCarInfo = function () {
+                    document.write(`<h3> ${ this.name }, ${ this.model }, ${ this.year } </h3>`);
+                }
+
+                function abc() {
+                    //local function
+                }
+            }
+
+            var x = new Car("Mahindra", "Petrol", 2021);
+            x.getCarInfo();
+
+            var x1 = new Car("Toyota", "Diesel", 2020);
+            x1.getCarInfo();
+        </script>
+    </body>
+</html>

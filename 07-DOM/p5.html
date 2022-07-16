@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <p class="test">This is a paragraph..!</p>
+        <h1 class="test">This is a paragraph..!</h1>
+
+        <p>This is one more paragraph..!</p>
+
+        <script>
+            var matches = document.getElementsByClassName("test");
+
+            document.write("<p><b>matches.length :</b></p>" + matches.length);
+
+            matches[0].style.fontWeight = "bold";
+            matches[1].style.background = "yellow";
+
+            for(var e in matches){
+                matches[e].style.background = "grey";
+                matches[e].style.color = "white";
+            }
+        </script>
+    </body>
+</html>

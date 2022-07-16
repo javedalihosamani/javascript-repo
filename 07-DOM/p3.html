@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1 id="dd">HEllo JavaScript.!</h1>
+        <input type="text" id="d">
+
+        <script>
+            var d = document.getElementById('d');
+            d.style.height = "50px";
+            d.style.width = "98%";
+            d.style.borderRadius = "5px";
+            d.style.color = "red";
+
+            console.log(d.getAttribute('id'));
+
+            d.setAttribute("name","Deepak");
+            d.setAttribute("value","Ajay");
+            console.log(d.getAttribute('name'));
+            console.log(d.getAttribute('value'));
+
+            function addElement(){
+                var p = document.createElement("p");
+                console.log(p)
+
+                var text = document.createTextNode("Hi this is Javascript DOM..!");
+                console.log(text);
+
+                p.appendChild(text);
+
+                document.body.appendChild(p);
+            }
+            addElement();
+        </script>
+    </body>
+</html>

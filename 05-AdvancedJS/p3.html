@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <button type="button" onclick="firstFunction()">Function 1</button>
+        <button type="button" onclick="secondFunction()">Function 2</button>
+
+        <button type="button" id="btn1">Without Event Listener</button>
+        <button type="button" id="btn2">With Event Listener</button>
+
+        <script>
+            function firstFunction(){
+                alert("First Function..!");
+            }
+                
+            function secondFunction(){
+                alert("Second Function..!");
+            }
+
+            var btn1 = document.getElementById("btn1");
+            btn1.onclick = firstFunction;
+            btn1.onclick = secondFunction;
+
+            var btn2 = document.getElementById("btn2");
+            btn2.addEventListener("click", firstFunction);
+            btn2.addEventListener("click", secondFunction);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <center>
+            <h2>Arrow functions</h2>
+            <p><b>Description : </b>Arrow functions (also called “fat arrow functions”) are undoubtedly one of the more popular features of ES6. They introduced a new way of writing concise functions.</p>
+            
+            <p>Arrow functions – also called “fat arrow” functions, from CoffeeScript (a transcompiled language) — are a more concise syntax for writing function expressions. They utilize a new token, =>, that looks like a fat arrow. Arrow functions are anonymous and change the way this binds in functions.</p>
+            <hr>
+        </center>
+        
+        <script>
+        
+            function Display1() {
+                document.write("<h2>This is Display1 Function</h2>");
+            }
+            Display1();
+        
+            //Expression Function ECMA SCRIPT v5
+            var Display2 = function() {
+                document.write("<h2>This is Display2 Function</h2>");
+            }
+            Display2();
+        
+            // Fat Arrow Function ECMA SCRIPT v6
+            var Display3 = () => document.write("<h2>This is Display3 Function</h2>");
+            Display3();
+            
+            var Display4 = function(firstName, lastName) {
+                document.write("<h2>This is Display4 Function</h2>" + firstName + " " + lastName + "<br><br>");
+            }
+            Display4("JavaScript1" , "ECMA Script1");
+            
+            var Display5 = (firstName, lastName) => document.write("<h2>This is Display5 Function</h2>" + firstName + " " + lastName + "<br><br>");
+            Display5("JavaScript2" , "ECMA Script2");
+        </script>
+        
+    </body>
+</html>

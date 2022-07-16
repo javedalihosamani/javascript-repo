@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS-Basics</title>
+    </head>
+    <body>
+        <center>
+            <h1>JS-Variable..!</h1>
+        </center>
+        <hr>
+
+        <script>
+            var firstVariable;
+            document.write("<b>Without Value :</b>", firstVariable ,"<br>");
+
+            firstVariable = "Hello JS..!";
+            document.write("<b>With Value :</b>", firstVariable, "<br>");
+            document.write("<b>With Value :", firstVariable, "</b><br>");
+            document.write("<b>With Value :"+ firstVariable + "</b><br>");
+            document.write(`<b>With Value : ${firstVariable} </b><br>`);
+            document.write(typeof(firstVariable) , '<br>');
+
+            firstVariable = 10000000;
+            document.write("<b>With Value :</b>", firstVariable,"<br>");
+            document.write(typeof(firstVariable) , '<br>');
+
+            firstVariable = "A";
+            document.write("<b>With Value :</b>", firstVariable,"<br>");
+            document.write(typeof(firstVariable) , '<br>');
+
+            firstVariable = 100000.111111;
+            document.write("<b>With Value :</b>", firstVariable,"<br>");
+            document.write(typeof(firstVariable) , '<br>');
+
+            firstVariable = true;
+            document.write("<b>With Value :</b>", firstVariable,"<br>");
+            document.write(typeof(firstVariable) , '<br>');
+
+            /* var is a weeker signal and always have global scope*/
+		    /* let and const are block scope variables */
+        </script>
+    </body>
+</html>

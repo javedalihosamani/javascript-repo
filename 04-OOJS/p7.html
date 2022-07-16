@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+                let colors = ["red", "blue", "green"];
+
+                for(i=0; i< colors.length; i++) {
+                    document.write(`<p style="color:red;"> ${ colors[i] } </p>`);
+                }
+
+                var x=0;
+                while(x < colors.length) {
+                    document.write(`<p style="color:deepskyblue;"> ${ colors[x] } </p>`);
+                    x++;
+                }
+
+                colors.forEach(function(item) {
+                    document.write(`<p style="color:orange;"> ${ item } </p>`);
+                });
+
+                for(let a of colors) {
+                    document.write(`<p style="color:green;"> ${ a } </p>`);
+                }
+
+                colors.map(function(item,key) {
+                    document.write(`<p style="color:blue;"> ${ key } ${ item } </p>`);
+                });
+        </script>
+    </body>
+</html>

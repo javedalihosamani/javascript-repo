@@ -1,0 +1,64 @@
+<script>
+    
+    // Closure Function (Still Confused Concept) : Closure means that an inner function always has access to the vars and parameters of its outer function.
+    
+    // Example 1
+    function OuterFunction(){
+        var outerVariable = 100;
+        
+        function InnerFunction(){
+            document.write("<b>InnerFunction : </b>" + outerVariable + "<br><br>");
+        }
+        InnerFunction();
+    }
+    OuterFunction();
+    
+    // Example 2
+    function counter1(){
+        var counter = 0;
+        
+        function IncreaseCounter(){
+            return counter += 1;
+        }
+        return IncreaseCounter;
+    }
+    var count = counter1();
+    document.write("<b>This is counter1 function :</b>" + count() + "<br><br>");
+    document.write("<b>This is counter1 function :</b>" + count() + "<br><br>");
+    document.write("<b>This is counter1 function :</b>" + count() + "<br><br>");
+    document.write("<b>This is counter1 function :</b>" + count() + "<br><br>");
+    
+    // Example 3
+    function counter2(){
+        var counter = 0;
+        
+        setTimeout( function(){
+            counter += 1;
+            document.write("<b>This is First setTimeout() Method :</b>" + counter + "<br><br>");
+            
+            var innerCounter = 0;
+            setTimeout(function(){
+                innerCounter += 1;
+                document.write("<b>This is Second setTimeout() Method :</b>" + innerCounter + "<br><br>");
+            },1000);
+            
+        }, 2000);
+    };
+    counter2();
+    
+    // Example 4
+    (function()
+        { 
+            var i = 10; 
+            document.write("<b>Example 4 :</b>"+ i + "<br><br>"); 
+        }
+    )();
+    
+    // Example 5
+    (function(firstName, lastName)
+        { 
+            document.write("<b>Example 5 :</b>"+ firstName +" "+lastName + "<br><br>"); 
+        }
+    )("Example5","closure Function");
+    
+</script>

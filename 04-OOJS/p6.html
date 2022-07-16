@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .list { color:crimson; }
+        </style>
+    </head>
+    <body>
+        <h1>objects</h1>
+        <script>
+            var users = [];
+            var user = {
+                "name": "Rajesh",
+                "age": 24,
+                "isAdmin": true,
+                "hobbies": ["trekking", "cycling"],
+                "sayHi": function () {
+                    return "Say hi to " + this.name;
+                },
+                "display": (na) => {
+                    /* this pointer not allowed only for arrow function declared as a property of an object.  */
+                    return "Welcome to javascript " + na;
+                },
+                "account": [
+                    {
+                        bank: "SBI",
+                        accNo: 12324
+                    },
+                    {
+                        bank: "ICICI",
+                        accNo: 456123
+                    }
+                ]
+            };
+
+            console.log(user);
+            document.write(`<h3> Name is ${ user.name }. welcome to bepractical </h3>`);
+            document.write('<h3> age is '+ user.age +'</h3>');
+            document.write(`<h3> isAdmin is ${ user["isAdmin"] } </h3>`);
+
+            user.hobbies.forEach(function (item) {
+                document.write(`<h3 class="list">  ${ item } </h3>`);
+            });
+
+            // array.forEach(function(index){})
+
+            document.write(`<h3>  ${ user.sayHi() } </h3>`);
+            document.write(`<h3>  ${ user.display("Manoj") } </h3>`);
+            document.write(`<h3>  ${ user.display(user.name) } </h3>`);
+        </script>
+
+        <h3>object.defineproperty</h3>
+        <script>
+            var user1 ={};
+            console.log('before',user1);
+            // Object.defineProperties
+            Object.defineProperty(user1,"name",{
+                value:"naveen",
+                Writable:false
+            });
+            console.log(user1.name)
+            //ASSIGNMENT
+            user1.name="Praveen";
+            console.log(user1.name)
+            console.log('after',user1);
+        </script> 
+        
+        <h3>object.freeze()</h3>
+        <script>
+            const user2={
+                name:"raju"
+            };
+            console.log('before name',user2.name);
+            Object.freeze(user2);//freeze the object (readonly)not allow to accept new value in strict
+            user2.name="suman";
+            console.log('after name', user2.name);
+        </script>
+    </body>
+</html>

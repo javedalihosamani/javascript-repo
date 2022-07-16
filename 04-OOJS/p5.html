@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var a = 2;  // integer number
+            var b = 3.14;  // floating-point number
+            var c = 0xff;  // hexadecimal number
+            var d = 1.57e4;  // //exponent value
+            var e = new Number(16); //integer value by number object  
+
+            var x = 10;
+            var y = 20;
+            var z = "30";
+            console.log(x + y); // 30
+            console.log(z + z); // '3030'
+            console.log(x + z); // '1030'
+        </script>
+
+        <pre>
+            1.isFinite(); //Returns Boolean Value
+            2.isInteger(); // check Interger or not
+            3.parseFloat();
+            4.parseInt();
+            5.toExponential();
+            6.toFixed();
+        </pre>
+
+        <script>
+            document.write("Number.isFinite(Infinity)" + Number.isFinite(Infinity)); // -Infinity,NaN
+            document.write("<br>");
+
+            function devide(m,n){  //m=0, n=10
+                return m/n;
+            }
+            document.write("(Number.isFinite(devide(0,10)) :" + Number.isFinite(devide(0,10)));
+            document.write("<br>");
+
+            document.write("Number.isFinite(devide(10,0)) :"+ Number.isFinite(devide(10,0)));
+            document.write("<br>");
+
+            //The parseFloat() method to parse floating-point number from a string.
+            console.log("ParseFloat :" + parseFloat("3.14"));  // 3.14
+            console.log("ParseFloat :" + parseFloat("50px"));  // 50
+            document.write("<br>");
+
+            //The parseInt() method can be used to parse an integer from a string.
+            console.log("parseInt :" + parseInt("3.14"));  // 3
+            console.log("parseInt :" + parseInt("50px"));  // 50
+            document.write("<br>");
+
+            //The toExponential() method to format or represent a number in exponential notation.
+            var p  = 67.1234;
+            console.log("toExponential :" + p.toExponential());  // 6.71234e+1
+
+            var q = 72.635;
+            console.log(q.toFixed());  // '73' (note rounding, no fractional part)
+            console.log(q.toFixed(2));  // '72.64' (note rounding)
+            console.log(q.toFixed(1));  // '72.6'
+            document.write("<br>");
+
+            //toString() method can be used to convert a number to its string equivalent. 
+            console.log((12).toString());  // '12'
+            console.log((15.6).toString());  // '15.6'
+        </script>
+    </body>
+</html>

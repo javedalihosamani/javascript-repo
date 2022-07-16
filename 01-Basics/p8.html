@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SCOPES</title>
+    </head>
+    <body>
+        <script>
+            /* var is a weeker signal and always have global scope*/
+            /* let and const are block scope variables */
+            
+            var x = 15;
+		
+		    /*let always have local (block) scope*/
+
+			if( x > 12) {
+				let a = 156;
+				document.write(`<h3>Local = ${ a } </h3>`);
+				document.write(`<h3>Local = ${ x } </h3>`);
+			}
+
+            document.write(`<h3> Global = ${ x } </h3>`);
+			document.write(`<h3> Global = ${ a } </h3>`);
+        </script>
+
+        <script>
+            const x = 18;
+            document.write(`<h3> before = ${ x } </h3>`);
+            x = 30;  // p17.html:13 Uncaught TypeError: Assignment to constant variable.
+            document.write(`<h3> after = ${ x } </h3>`);
+        </script>
+    </body>
+</html>

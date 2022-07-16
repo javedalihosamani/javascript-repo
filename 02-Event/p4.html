@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h3>onmousedown and onmouseup</h3>
+
+        <div id="blk" onmousedown="downHandler()" onmouseup="upHandler()" >
+            mousedown and mouseup
+        </div>
+
+        <script>
+            function downHandler() {
+                document.getElementById("blk").style.background = "crimson";
+            }
+
+            function upHandler() {
+                document.getElementById("blk").style.background = "gold";
+            }
+        </script>
+    </body>
+</html>

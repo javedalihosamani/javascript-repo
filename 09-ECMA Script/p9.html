@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+            <h3>Array join -> object array</h3>
+            <script>
+                let c1 = [
+                    {
+                        id: 123,
+                        name: 'Manoj',
+                        email: 'manoj@gmail.com'
+                    },
+                    {
+                        id: 124,
+                        name: 'raju',
+                        email: 'raju@gmail.com'
+                    }
+                ];
+                let c2 = [
+                    {
+                        id: 233,
+                        name: "Mohan",
+                        email: 'mohan@gmail.com'
+                    },
+                    {
+                        id: 255,
+                        name: "Suma",
+                        email: "suma@gmail.com"
+                    }
+                ];
+                let c3 = [
+                    {
+                        id: 334,
+                        name: "Radha",
+                        email: "radha@gmail.com"
+                    },
+                    ...c1,
+                    ...c2
+                ];
+
+                console.log('c1', c1);
+                console.log('c2', c2);
+                console.log('c3', c3);
+            </script>
+    </body>
+</html>

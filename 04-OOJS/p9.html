@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            function Student() {
+                this.name = "Be-practical";
+                this.gender = "Male";
+        
+                // document.write(this.name + " " + this.gender );
+            }
+            //Student();
+            var stud = new Student();
+            document.write("<b>Stud.name : </b>" + stud.name + "<br><br>");
+            document.write("<b>Stud.gender : </b>" + stud.gender + "<br><br>");
+        
+            stud.age = 20;
+            document.write("<b>Stud.age : </b>" + stud.age + "<br><br>");
+        
+            var stud1 = new Student();
+            document.write("<b>Stud1.age : </b>" + stud1.age + "<br><br>");
+        
+            Student.prototype.age1 = 30;
+        
+            var student = new Student();
+            document.write("<b>student.age1 :</b>" + student.age1 + "<br><br>");
+        
+            var student1 = new Student();
+            document.write("<b>student1.age1 :</b>" + student1.age1 + "<br><br>");
+        </script>        
+    </body>
+</html>

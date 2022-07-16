@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS-Basics</title>
+    </head>
+    <body>
+        <center>
+            <h1>Type Conversion</h1>
+        </center>
+        <hr>
+
+        <script>
+            document.write("3" - 2 +"<br>");  // Outputs: 1 
+            document.write("3" + 2 +"<br>");  // Outputs: "32" (because + is also concatenation operator)
+            document.write(3 + "2" +"<br>");  // Outputs: "32"
+            document.write("3" * "2" +"<br>");  // Outputs: 6
+            document.write("10" / "2" +"<br>");  // Outputs: 5
+
+            document.write("<h1>Converting Values to Numbers</h1>");
+            var str = "123";
+            document.write(typeof(str) +"<br>"); // Outputs: string
+
+            var num = Number(str); // Becomes a number 123
+            document.write(typeof num +"<br>"); // Outputs: number
+
+            var number1 = Number("10.5" );
+            document.write(typeof(number1)+"<br>"); // Outputs: number
+
+            var x = "123.343";
+		    var y = 1245.6770578654;
+
+            var a = Number(x); /* covert to any type into number */
+            document.write(`<h3> Number = ${ a } </h3>`);
+
+            var a1  = parseInt(x); // int values
+       		document.write(`<h3> int = ${ a1 } </h3>`);
+
+            var a2 = parseFloat(x);
+            var a3 = parseFloat(y);
+
+           document.write(`<h3> float = ${ a2 } </h3>`);
+           document.write(`<h3> float = ${ a3.toFixed(3) } </h3>`);
+
+            Number(true)  // returns 1
+            Number(false)  // returns 0
+            Number(null)  // returns 0
+            Number(" 123 ")  // returns 123
+            Number(" ")  // returns 0
+            Number("")  // returns 0
+            Number("123e-1")  // returns 12.3
+            Number("0xFF") // returns 255 (hexadecimal representation)
+            Number("undefined")  // returns NaN
+            Number("null")  // returns NaN
+            Number("Hello World!")  // returns NaN
+        </script>
+        <script>
+            document.write("<h1>Converting Values to Strings</h1>");
+            var bool = true;
+            document.write(typeof bool+"<br>"); // Outputs: boolean
+
+            var str = String(bool); // Becomes a string "true"
+            document.write(typeof str+"<br>"); // Outputs: string
+
+            var str1 = String(10.5)  // returns "10.5"
+            document.write("<p><b>str1</b></p>" + str1);
+            document.write("<p><b>str1</b></p>" + typeof(str1));
+            String(123)  // returns "123"
+            String(100 + 23)  // returns "123"
+            String(true)  // returns "true"
+            String(false)  // returns "false"
+            String(123e-1)  // returns "12.3"
+            String(0xFF) // returns "255"
+            String(undefined)  // returns "undefined"
+            String(null)  // returns "null"
+        </script>
+        <script>
+            document.write("<h1>Converting Values to Boolean</h1>");
+            Boolean(0) // returns false
+            Boolean(null)  // returns false
+            Boolean(false)  // returns false
+            Boolean(undefined)  // returns false
+            Boolean(NaN)  // returns false
+            Boolean("") // returns false
+            Boolean(1) // returns true
+            Boolean(true) // returns true
+        </script>
+        <script>
+            document.write("<h1>Type Conversions Using Operators</h1>");
+            var x = "10"; // x is a string
+            var y = +x;
+            alert(typeof(y)); // Outputs: number
+            alert(y); // Outputs: 10
+
+            var x = 10; // x is a number
+            var y = x + "";
+            alert(typeof(y)); // Outputs: string
+            alert(y); // Outputs: 10
+
+            var x = "15"; // x is a string
+            var y = x - 0;
+            alert(typeof(y)); // Outputs: number
+            alert(y); // Outputs: 15
+        </script>
+    </body>
+</html>

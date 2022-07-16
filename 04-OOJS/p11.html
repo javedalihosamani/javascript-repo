@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h3>Object based inheritance ( inheritance chain ) </h3>
+        <script>
+            var c1 = {
+                c1title: "HTML",
+                c1fee: 23423
+            };
+
+            var c2 = Object.create(c1, {
+                c2title: {
+                    value: "css"
+                },
+                c2fee: {
+                    value: 12323
+                }
+            });
+
+            var c3 = Object.create(c2, {
+                c3title: {
+                    value: "javascript"
+                },
+                c3fee: {
+                    value: 33434
+                }
+            });
+
+            var bep = Object.create(c3, {
+                name: {
+                    value: "be-practical"
+                }
+            });
+
+            document.write(`<h3> ${ bep.c1title } </h3>`);
+            document.write(`<h3> ${ bep.c1fee } </h3>`);
+            document.write(`<h3> ${ bep.c2title } </h3>`);
+            document.write(`<h3> ${ bep.c2fee } </h3>`);
+            document.write(`<h3> ${ bep.c3title } </h3>`);
+            document.write(`<h3> ${ bep.c3fee } </h3>`);
+            document.write(`<h3> ${ bep.name } </h3>`);
+        </script>
+    </body>
+</html>

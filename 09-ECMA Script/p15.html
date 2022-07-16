@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Prototype Object</h1>
+        <p>Prototype Objects to acquire properties and features from one another.</p>
+
+        <strong>Syntax</strong>
+        <p>ClassName.prototype.methodName</p>
+
+        <script>
+            function Employee(firstName, lastName) {
+                this.firstName1 = firstName;
+                this.lastName1 = lastName;
+            }
+            Employee.prototype.fullName = function() {
+                return this.firstName1 + " " + this.lastName1;
+            }
+            var emp = new Employee("Javed Ali", "Ali Javed");
+            document.write(emp.firstName1+"<br>");
+            document.write(emp.lastName1+"<br>");
+            document.write(emp.fullName());
+        </script>
+        <script>
+            class Javed {
+                constructor(fname, lname) {
+                    this.firstName = fname;
+                    this.lastName = lname;
+                }
+            }
+            var j = new Javed("Arjun", "Partha");
+
+            Javed.prototype.Result = function() {
+                return this.firstName + " " + this.lastName;
+            }
+            document.write(j.Result());
+        </script>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h3>Nested objects</h3>
+        <script>
+            var user = {
+                name: "Mahesh",
+                account: [
+                    {
+                        bankId: 123,
+                        accNo: 234343,
+                        bName: "SBI",
+                        type: "sb"
+                    },
+                    {
+                        bankId: 243,
+                        accNo: 34355,
+                        bName: "AXIS",
+                        type: "current"
+                    }
+                ],
+                emp: {
+                    company: "XYZ Pvt Ltd",
+                    salary: "2.5 LPA",
+                    designation: "Web Developer"
+                }
+            }
+
+            document.write(`<h3> Name is ${ user.name } </h3>`);
+            document.write(`<hr>`);
+
+            // user.account.forEach(function (item) {
+            //     document.write(`<h3> Bank Id = ${ item.bankId } </h3>`);
+            //     document.write(`<h3> Bank accountNo = ${ item.accNo } </h3>`);
+            //     document.write(`<h3> Bank name = ${ item.bName } </h3>`);
+            //     document.write(`<h3> Account Type = ${ item.type } </h3>`);
+            // });
+
+            for(var i=0; i < user.account.length; i++) {
+                document.write(`<h3> Bank Id = ${ user.account[i].bankId } </h3>`);
+                document.write(`<h3> Bank accountNo = ${ user.account[i].accNo } </h3>`);
+                document.write(`<h3> Bank name = ${ user.account[i].bName } </h3>`);
+                document.write(`<h3> Account Type = ${ user.account[i].type } </h3>`);
+            };
+            document.write(`<hr>`);
+
+            document.write(`<h3> Company = ${ user.emp.company } </h3>`);
+            document.write(`<h3> Salary = ${ user['emp']['salary'] } </h3>`);
+            document.write(`<h3> Salary = ${ user['emp']['designation'] } </h3>`);
+        </script>
+    </body>
+</html>

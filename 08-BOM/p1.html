@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            function getResolution() {
+                alert("Your screen is: " + screen.width + "x" + screen.height);
+            }
+        </script>
+     
+        <button type="button" onclick="getResolution();">Get Resolution</button>
+
+        <script>
+            function getAvailSize() {
+                alert("Available Screen Width: " + screen.availWidth + ", Height: " + screen.availHeight);
+            }
+        </script>
+        <button type="button" onclick="getAvailSize();">Get Available Size</button>
+
+        <script>
+            function getColorDepth() {
+                alert("Your screen color depth is: " + screen.colorDepth);
+            }
+        </script>
+
+        <button type="button" onclick="getColorDepth();">Get Color Depth</button>
+        
+        <script>
+            function getPixelDepth() {
+                alert("Your screen pixel depth is: " + screen.pixelDepth);
+            }
+        </script>
+
+        <button type="button" onclick="getPixelDepth();">Get Pixel Depth</button>
+    </body>
+</html>

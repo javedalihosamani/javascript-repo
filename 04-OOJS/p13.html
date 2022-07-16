@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h3>class constructor (function constructor)</h3>
+        <script>
+            function Car() {
+                //property of constructor
+                this.model = 2022;
+                this.color = "blue";
+
+                // local var 
+                var mileage = 20;
+                document.write(`<h3> mileage = ${ mileage } </h3>`);
+            }
+
+        // Car(); // call -> its not allowed to access property 
+        let x = new Car(); // ref
+        console.log('x = ', x);
+        document.write(`<h3> Model = ${ x.model } </h3>`);
+        document.write(`<h3> Color = ${ x.color } </h3>`);
+
+        /* function                        constructor
+        1.name starts with lowercase      name 1st letter starts with uppercase
+        2. cannot allow to create props   allow to create properties using this keyword
+        3. execute with function call     access props with ref using new keyword
+        */
+        </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h3>Mouse events</h3>
+
+        <h3 id="txt" onmouseover="handler()" onmouseout="outHandler()" >Hover your mouse pointer on me</h3>
+
+        <script>
+            function handler() {
+                document.getElementById("txt").style.background = "crimson";
+                document.getElementById("txt").style.color = "#fff";
+                document.getElementById("txt").style.padding = "20px";
+            }
+
+            function outHandler() {
+                document.getElementById("txt").style.background = "#222";
+                document.getElementById("txt").style.color = "gold";
+                document.getElementById("txt").style.padding = "20px";
+            }
+        </script>
+    </body>
+</html>

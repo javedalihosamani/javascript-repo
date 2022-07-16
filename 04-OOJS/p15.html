@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h3>Prototype</h3>
+        <script>
+            function Course() {
+            }
+
+            // creating property outside the constructor
+            Course.prototype.title = "JavaScript";
+            Course.prototype.getTitle = () => {
+                    document.write(`<h3> function = ${ this.title } </h3>`); /* this pointer not allow in arrow function */
+            }
+
+            let c = new Course();
+            document.write(`<h3> ${ c.title } </h3>`);
+            c.getTitle();
+        </script>
+    </body>
+</html>

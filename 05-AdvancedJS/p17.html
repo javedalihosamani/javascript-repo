@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Strict Mode</h1>
+        <p>Strict mode if you initialize a variable with declaring it using the var keyword.</p>
+
+        <script>
+            "use strict";
+
+            function sayHello() {
+                "use strict";
+                //var str;
+                str = "Hello World!"; // ReferenceError: str is not defined
+                console.log(str);
+            }
+            sayHello();
+
+            function doSomething() {
+                //var msg;
+                msg = "Hi, there!"; // ReferenceError: msg is not defined
+                return msg;
+            }
+            console.log(doSomething());
+        </script>
+    </body>
+</html>

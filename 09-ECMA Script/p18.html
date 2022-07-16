@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>JavaScript Polymorphism..!</h1>
+        <p>It provides a way to perform a single action in different forms. It provides an ability to call the same method on different JS objects.</p>
+        <hr>
+
+        <h3>JavaScript Polymorphism Example1..!</h3>
+        <script>
+            class A {
+                constructor() {}
+                display() {
+                    document.write("This is A class..!");
+                }
+            }
+            class B extends A {
+                constructor() {
+                    super();
+                }
+            }
+
+            var b = new B();
+            b.display();
+
+        </script>
+
+        <h3>JavaScript Polymorphism Example2..!</h3>
+        <script>
+            class C {
+                constructor() {}
+                display() {
+                    document.write("This is C class..!<br>");
+                }
+            }
+
+            class D extends C {
+                constructor() {
+                    super();
+                }
+                display() {
+                    document.write("This is D Class..!<br>");
+                }
+            }
+
+            var c = new C();
+            c.display();
+
+            var d = new D();
+            d.display();
+
+            var e = [new C(), new D()];
+            e.forEach(function(msg) {
+                msg.display();
+            });
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>JavaScript Encapsulation</h1>
+        <p>It is process of binding the data with the fucntions acting on that data. It allows us to control the data and validate it.</p>
+        <hr>
+
+        <details>
+            <summary><b>Points to remember..!</b></summary>
+            <ul>
+                <li>Use var keyword to make data members private.</li>
+                <li>Use setter method to set the data and getter method to get that data.</li>
+            </ul>
+        </details>
+        <p><b>Encapsulation allows us to handle an object using the following properties.</b></p>
+        <p><b>Read/write - </b> Here, we use setter methods to write the data and getter methods read that data.</p>
+        <p><b>Read Only - </b> In this case, we use getter methods only.</p>
+        <p><b>Write Only - </b> In this case, we use setter methods only.</p>
+        <hr>
+
+        <h3>JavaScript Encapsulation Example..!</h3>
+        <script>
+            class Student {
+                constructor() {
+                    var firstName;
+                    var lastName;
+                    var marks;
+                    var mobile;
+                }
+
+                getMobile() {
+                    return this.mobile;
+                }
+                setMobile(mobile1) {
+                    this.mobile = mobile1;
+                }
+
+                setName(fname, lname) {
+                    this.firstName = fname;
+                    this.lastName = lname;
+                }
+                getName() {
+                    return this.firstName + " " + this.lastName;
+                }
+            }
+
+            var stud = new Student();
+
+            stud.setMobile(9876543210);
+            document.write("<b>Your Mobile Number is :</b> " + stud.getMobile());
+
+            stud.setName("Javed", "Ali");
+            document.write("<b>Your Fullname is :</b>" + stud.getName());
+
+        </script>
+
+        <h3>JavaScript Encapsulation Example validate..!</h3>
+        <script>
+            class Student1 {
+                constructor() {
+                    var name;
+                    var marks;
+                }
+                getName() {
+                    return this.name;
+                }
+                setName(name1) {
+                    this.name = name1;
+                }
+
+                getMarks() {
+                    return this.marks;
+                }
+                setMarks(marks1) {
+                    //this.marks = marks1;
+                    if (marks1 < 0 || marks1 > 100) {
+                        alert("Invalid Marks..!");
+                    } else {
+                        this.marks = marks1;
+                    }
+                }
+            }
+
+            var stud1 = new Student1();
+            stud1.setName("Be-practical..!");
+            stud1.setMarks(40);
+            document.write(stud1.getName() + " " + stud1.getMarks());
+        </script>
+    </body>
+</html>

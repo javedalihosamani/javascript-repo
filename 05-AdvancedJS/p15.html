@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            section {
+                width:100%;
+                overflow-x: hidden;
+                display:grid;
+                grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+                grid-gap: 10px;
+            }
+
+            article {
+                background-color: crimson;
+                padding:5px;
+                color:#eee;
+            }
+
+            article h4 {
+                color:gold;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Users API</h3>
+        <section id="user"></section>
+
+        <script>
+            fetch(`https://jsonplaceholder.typicode.com/users`)
+                .then(response => response.json())
+                .then(res => {
+                    console.log('res =', res);
+                    print(res);
+                }).catch(err => console.log(err.message));
+
+            let blk = document.querySelector("#user");
+                function print(data) {
+                    data.forEach(item => {
+                        let article = document.createElement('article');
+                        let na = document.createElement("h4");
+                        let em = document.createElement("h5");
+                        let ph = document.createElement("h5");
+                        let uname = document.createElement("h5");
+                        let web = document.createElement("h5");
+                        
+                        let add = document.createElement("div");
+                        let city = document.createElement("h6");
+                        let zip = document.createElement("h6");
+                        let str = document.createElement("h6");
+                        let suit = document.createElement("h6");
+                        
+                        let geo = document.createElement("div");
+                        let lng = document.createElement("h6");
+                        let lat = document.createElement("h6");
+
+                        let cmp = document.createElement('div');
+                        let cName = document.createElement("h5");
+                        let cp = document.createElement("h6");
+                        let bs = document.createElement("h6");
+
+                        /* content */
+                        na.textContent = item.name;
+                        em.textContent = item.email;
+                        ph.textContent = item.phone;
+                        uname.textContent = item.username;
+                        web.textContent = item.website;
+
+                        city.textContent = item.address.city;
+                        str.textContent = item.address.street;
+                        suit.textContent = item.address.suite;
+                        zip.textContent = item.address.zipcode;
+
+                        article.appendChild(na);
+                        article.appendChild(em);
+                        article.appendChild(ph);
+                        article.appendChild(uname);
+                        article.appendChild(web);
+
+                        add.appendChild(city);
+                        add.appendChild(str);
+                        add.appendChild(suit);
+                        add.appendChild(zip);
+                        
+                        article.appendChild(add);
+                        blk.appendChild(article);
+                    });
+                }
+        </script>
+    </body>
+</html>

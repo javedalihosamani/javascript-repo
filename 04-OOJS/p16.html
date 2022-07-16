@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h3>Inheritance in constructor</h3>
+        <script>
+            function Car(name) {
+                this.name = name;
+                this.display = function () {
+                    document.write(`<h3>Car name is ${ this.name } </h3>`);
+                }
+            }
+
+            function Bus(name) {
+                this.name = name;
+                this.display = function () {
+                    document.write(`<h3>Bus name is ${ this.name } </h3>`);
+                }
+            }
+
+            Bus.prototype.__proto__ = Car.prototype; // inherting car into bus
+
+            let x = new Bus("Tata");
+
+            x.display();
+
+        </script>
+    </body>
+</html>

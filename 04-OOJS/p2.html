@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            document.write("<h1>By creating instance of Object directly (using new keyword)</h1>");
+
+            var empDetails1 = new Object();
+
+            console.log(typeof(empDetails1));
+
+            empDetails1.firstName ="Be-practical";
+			empDetails1.lastName="Tech Solutions..!";
+			empDetails1.fullName = function(){return this.firstName+" "+this.lastName}
+			
+			document.write(empDetails1.firstName+"<br>");
+			document.write(empDetails1.lastName+"<br>");
+			document.write(empDetails1.fullName()+"<br>");
+
+            document.write("<h1>By using an object constructor (using new keyword)</h1>");
+            function StudInfo(firstName, lastName){
+
+                var fn , ln;
+                // fn= firstName;
+                // ln=lastName;
+
+                this.fn = firstName;
+                this.ln = lastName;
+
+                document.write("First name  is : " + fn + "<br>");
+                document.write("Last name  is : " + ln + "<br>");
+            }
+
+            //StudInfo("HTML", "CSS");
+
+            var studDetails = new StudInfo("HTML", "CSS");
+            document.write(typeof(stuDetails));
+
+            document.write("First name  is : " + studDetails.fn + "<br>");
+            document.write("Last name  is : " + studDetails.ln + "<br>");
+        </script>
+    </body>
+</html>

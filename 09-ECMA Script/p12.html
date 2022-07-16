@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>JavaScript Constructor Method</h1>
+        <p>This is special type of method which is used to initialize and create an object.</p>
+        <hr>
+
+        <h4>Points to Remember</h4>
+        <ul>
+            <li>Constructor Key word is used to declare a constructor method.</li>
+            <li>The class can contain one contructor method only</li>
+            <li>Parent class constructor through super keyword.</li>
+        </ul>
+        <hr>
+
+        <h3>Constructor Method Example1..!</h3>
+        <script>
+            class Employee {
+                constructor() {
+                    this.id = 1;
+                    this.name = "Be-practical Tech Solutions..!";
+                }
+            }
+            var emp = new Employee();
+            document.write(emp.id + " " + emp.name);
+        </script>
+
+        <h3>Constructor Method Example 2 with Super Keyword..!</h3>
+        <script>
+            class CompanyName {
+                constructor() {
+                    this.company = "Be-practical Tech Solutions..!";
+                }
+            }
+
+            class EmployeeDetails extends CompanyName {
+                constructor(id, name) {
+                    super();
+                    this.id1 = id;
+                    this.name1 = name;
+                    this.deepak = this.company;
+                }
+            }
+            var empDetails = new EmployeeDetails(2, "Javed Ali");
+
+            document.write("<b>Company Name is :</b>" + empDetails.deepak + " <b>Employee Id is :</b>" + empDetails.id1 + " <b>Employee Name is :</b>" + empDetails.name1);
+            document.write(empDetails.deepak);
+
+        </script>
+
+        <h3>Constructor Method Example 3 with Super Keyword..!</h3>
+        <script>
+            class CompanyName1 {
+                constructor(com) {
+                    this.company = com;
+                }
+            }
+
+            class EmployeeDetails1 extends CompanyName1 {
+                constructor(id, name) {
+                    super("Hello");
+                    this.id1 = id;
+                    this.name1 = name;
+                    this.deepak = this.company;
+                }
+            }
+            //var companyName = new CompanyName("Be-practical..1");
+            var empDetails = new EmployeeDetails1(2, "Javed Ali");
+            document.write("<b>Company Name is :</b>" + empDetails.company + " <b>Employee Id is :</b>" + empDetails.id1 + " <b>Employee Name is :</b>" + empDetails.name1);
+            document.write(empDetails.deepak);
+        </script>
+    </body>
+</html>

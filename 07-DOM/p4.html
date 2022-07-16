@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <input type="text" id="firstName" onkeyup ="DisplayResult();">
+        <h1 id="result"></h1>
+
+        <script>
+            var textBox = document.getElementById("firstName");
+
+            textBox.style.padding = "15px";
+            textBox.style.border = "2px solid blue";
+            textBox.style.borderRadius = "5px";
+            textBox.style.backgroundColor = "lightgrey";
+
+            function DisplayResult(){
+                var textBoxvalue = textBox.value;
+                console.log(textBoxvalue);
+
+                document.getElementById("result").innerHTML = textBoxvalue;
+            }
+        </script>
+    </body>
+</html>

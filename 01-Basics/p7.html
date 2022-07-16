@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS-Basics</title>
+    </head>
+    <body>
+        <center>
+            <h1>Looping Statement..!</h1>
+        </center>
+
+        <ol>
+            <li>While Loop</li>
+            <li>Do While Loop</li>
+            <li>For Loop</li>
+        </ol>
+
+        <h2>While Loop Example..!</h2>
+        <script>
+            var i = 1;
+
+            while(i <= 5)
+            {
+                document.write("<p> The Number is " + i + "</p>");
+                i++;
+            }
+        </script>
+        <h2>Do white Loop Example..!</h2>
+        <script>
+            var j =1;
+            do
+            {
+                document.write("<p> The Number is " + j + "</p>");
+                j++;
+            }while(j<=5)
+        </script>
+
+        <h2>For Loop Exampl 1..!</h2>
+        <script>
+            for(var k = 0; k<=5; k++)
+            {
+                document.write("<p> The Number is " + k + "</p>");
+            }
+        </script>
+        <hr>
+        <h2>For Loop Exampl 2..!</h2>
+
+        <script>
+            var fruits = ["Apple","Banana", "Mango", "Orange", "Papaya", 1999];
+
+            document.write("fruits :" + typeof(fruits)+"</br>");
+            
+            for(var i=0; i<fruits.length; i++){
+                document.write("<p>"+ fruits[i] +"</p>");
+            }
+        </script> 
+
+        <h2>For Loop Exampl 3..!(THE FOR...IN LOOP)</h2>
+        <script>
+            var fruits = ["Apple","Banana", "Mango", "Orange", "Papaya", 1999];
+            
+            for(var i in fruits){
+                document.write("<p>"+ fruits[i] +"</p>");
+            }
+        </script>
+
+        <h2>For Loop Exampl 4..!(THE FOR...OF LOOP ES6)</h2>
+        <script>
+            var fruits = ["Apple","Banana", "Mango", "Orange", "Papaya", 1999];
+            
+            for(var i of fruits){
+                document.write("<p>"+ i +"</p>");
+            }
+        </script>
+    </body>
+</html>

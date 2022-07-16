@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h3>Generator functions </h3>
+        <script>
+                function* users() {
+                    // yield is kind of like return
+                    // return x returns the value of x , but yield x returns a function, 
+                    yield "Raju";
+                    yield "mahesh";
+                    yield "Ranjitha";
+                    yield "savitha";
+                    yield "venkatesh";
+                }
+
+                console.log('users()', users());
+
+                for(let item of users()){
+                    document.write(`<h3> ${item} </h3>`);
+                }
+
+        </script>
+    </body>
+</html>

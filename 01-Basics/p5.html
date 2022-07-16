@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS-Basics</title>
+        <style>
+            table, th,td{
+                background-color:lightgray;
+                border: 2px solid grey;
+                padding: 10px;
+                border-collapse: collapse;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <h1>Conditions Statements..!</h1>
+        </center> 
+
+        <hr>
+
+        <ol>
+            <li>Simple If</li>
+            <li>If Else</li>
+            <li>If Else Ladder</li>
+            <li>Switch Case</li>
+        </ol>
+
+        <hr>
+
+        <table>
+            <tr>
+                <th><label for="">Enter First Number :</label></th>
+                <td><input type="number" name="firstNumber" id="firstNumber" placeholder="First number"></td>
+            </tr>
+            <tr>
+                <th><label for="">Enter Second Number :</label></th>
+                <td><input type="number" name="secondNumber" id="secondNumber" placeholder="Second number"></td>
+            </tr>
+            <tr>
+                <th><label for="">Enter Third Number :</label></th>
+                <td><input type="number" name="thirdNumber" id="thirdNumber" placeholder="Third number"></td>
+            </tr>
+            <tr>
+                <th><label for="">Result :</label></th>
+                <td><p id="result"></p></td>
+            </tr>
+            <tr>
+                <td><button type="button" id="btn-cnd">Sumbit</button></td>
+                <td><button type="button" id="btn-cnl">Cancel</button></td>
+            </tr>
+        </table>
+
+        <script>
+            function checkCnd(){
+                var firstNumber = parseInt(document.getElementById('firstNumber').value);
+                var secondNumber = document.getElementById('secondNumber').value;
+                var thirdNumber = document.getElementById('thirdNumber').value;
+
+                if(firstNumber > +secondNumber && firstNumber > +thirdNumber){
+                    document.getElementById("result").innerHTML = "First Number is Big.";
+                }
+                else if(+secondNumber > firstNumber && +secondNumber > +thirdNumber){
+                    document.getElementById("result").innerHTML = "Second Number is Big.";
+                }
+                else if(+thirdNumber > firstNumber && +thirdNumber > +secondNumber){
+                    document.getElementById("result").innerHTML = "Third Number is Big.";
+                }
+                else{
+                    document.getElementById("result").innerHTML = "Invalid..!";
+                }
+
+                var message;
+
+                message = firstNumber < 21 ? "You are child" : "You are adult";
+
+                console.log(message);
+            }
+            document.getElementById('btn-cnd').onclick = checkCnd;
+        </script>
+    </body>
+</html>

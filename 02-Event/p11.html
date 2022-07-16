@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body onresize="screenHandler()">
+        <h3>onresize()</h3>
+        <h3 id="txt"></h3>
+        <script>
+            function screenHandler() {
+                var w = screen.availWidth;
+                var h = screen.availHeight;
+
+                document.getElementById("txt").innerText = `width = ${w}px, and height = ${h}px`;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h3>Inheritance in prototype</h3>
+        <script>
+            /* class constructor */
+            function Animal(color) {
+                this.color = color;
+            }
+
+            Animal.prototype.print = function () {
+                    document.write(`<h3>Animal color is  ${ this.color } </h3>`);
+            }
+
+            function Rabbit(color) {
+                this.color = color;
+            }
+
+            Rabbit.prototype.print = function () {
+                document.write(`<h3>Rabbit color is  ${ this.color } </h3>`);
+            }
+
+            Animal.prototype.__proto__ = Rabbit.prototype;
+
+            let x = new Animal("Red");
+                x.print();
+        </script>
+    </body>
+</html>

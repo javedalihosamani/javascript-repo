@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var date = new Date();
+
+                document.write(date +"<br>");
+                document.write("<hr>");
+
+                var date1 = new Date(2018, 0, 31, 14,20,35);
+                document.write(date1 +"<br>");
+                document.write("<hr>");
+
+                var date2 = new Date("31 January 2019");
+                document.write(date2 +"<br>");
+                document.write("<hr>");
+        </script>
+
+        <h1>Digital Clock</h1>
+
+        <h3 id="clock"></h3>
+
+        <script>
+            function DigitalClock(){
+                var clock = new Date();
+                document.getElementById("clock").innerHTML = clock.getHours() + " : " + clock.getMinutes() + " : " + clock.getSeconds();
+            }
+            setInterval("DigitalClock()" ,1000);
+        </script>
+    </body>
+</html>

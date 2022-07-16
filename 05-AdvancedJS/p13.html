@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h3>Promises in fetch method</h3>
+        <div id="git"></div>
+        <script>
+            fetch(`assets/js/user.json`)
+                .then(response => response.json())
+                .then(user => fetch(`https://api.github.com/users/${user.name}`)
+                            .then(resp => resp.json())
+                            .then(gitUser => new Promise((resolve,reject) => {
+                                        let img = document.createElement("img");
+                                            img.src = gitUser.avatar_url;
+                                        let block = document.querySelector("#git");
+                                        block.appendChild(img);
+
+                                        setTimeout(function () {
+                                            img.remove();
+                                            resolve(gitUser);
+                                        },3000);
+                                        
+                                        setTimeout(function () {
+                                            reject(gitUser.message);
+                                        },3000);
+                            }))
+                )
+                .catch(err => console.log(err.message));
+        </script>
+    </body>
+</html>

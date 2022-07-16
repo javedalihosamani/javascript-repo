@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h3>property inside class</h3>
+        <script>
+            class User {
+                constructor() {
+                    document.write(`<h3>Constructor called</h3>`);
+                    // initial properties
+                    this.name = "Ramesh";
+                    this.email = "ramesh@gmail.com";
+                    this.mobile = "9988665544";
+                    this.account = {
+                        bank: "SBI",
+                        accNo: 1234546,
+                        balance: 20000
+                    }
+                }
+
+                getUser() {
+                    return "hi " + this.name + ", welcome to js";
+                }
+            }
+
+            let x = new User(); // ref
+
+                document.write(`<h3> ${x.getUser() } </h3>`);
+                document.write(`<h3> ${x.email } </h3>`);
+                document.write(`<h3> ${x.mobile } </h3>`);
+                document.write(`<h3> ${x.name } </h3>`);
+                document.write(`<h3> ${x.account.bank } </h3>`);
+                document.write(`<h3> ${x.account.accNo } </h3>`);
+                document.write(`<h3> ${x.account.balance } </h3>`);
+
+                /* 
+                    1. constructor method invokes at the time ref creation
+                    2. constructor will allocates the memory location for properties
+                    3. properties we can call only w.r.to ref
+                */
+        </script>
+    </body>
+</html>
